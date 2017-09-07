@@ -6,5 +6,38 @@
 <body>
 <p>my first web page</p>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$.ajax({
+    url: "https://api.uber.com/v1/estimates/price",
+    headers: {
+        Authorization: "Token drwIYl-Vptjj4UVMHWYhoagZuRAamyUbVI2Naaqa"
+    },
+    data: {
+        start_latitude: 37.8722357,
+        start_longitude: -122.27165579999999,
+        end_latitude: 37.870623,
+        end_longitude: -122.270364
+    },
+    success: function(result) {
+       console.log(result);
+    }
+  });
+
+// 	$.ajax({ url:'https://api.uber.com/v1.2/products?latitude=37.7759792&longitude=-122.41823',  beforeSend: function (xhr) {
+//     xhr.setRequestHeader ("Authorization",
+//      "Token drwIYl-Vptjj4UVMHWYhoagZuRAamyUbVI2Naaqa");
+//   },})
+
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', 'https://api.uber.com/v1.2/products?latitude=37.7759792&longitude=-122.41823');
+// xhr.setRequestHeader("Authorization", "Token drwIYl-Vptjj4UVMHWYhoagZuRAamyUbVI2Naaqa");
+// xhr.send();
+
+// console.log(xhr.statusText);
+
+</script>
 </body>
+	
 </html>
